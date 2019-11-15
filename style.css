@@ -1,0 +1,152 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  background-color: #F1F1F1;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #666;
+  font-size: 100%;
+  line-height: 1.45em /* 23.2px/16=1.45em */;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+h1 {
+  font-size: 1em /* 16px/16=1em */;
+  margin-bottom: 0.375em /* 6px/16=0.375em */;
+}
+
+p {
+  font-size: 0.875em /* 14px/16=0.875em */;
+  margin-bottom: 1em /* 16px/16=1em */;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+del {
+  display: none ;
+}
+
+.mid {
+  width: 95%;
+  height: 600px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.frame {
+  border: 1px solid rgb(31, 40, 49);
+  background-color : #FFFFFF;
+  color : #000000;
+  overflow: auto;
+  position: relative;
+}
+
+.texte {
+  width: 45%;
+  white-space: nowrap;
+  height: 600px;
+  float : left;
+  padding: 5px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.transcriptions {
+  width: 20%;
+  white-space: nowrap;
+  height: 600px;
+  float : left;
+  padding: 5px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.hsize {
+  width: 2%;
+  height: 100px;
+  float: left;
+}
+
+.wordWrap {
+  word-wrap: break-word;      /* IE 5.5-7 */
+  white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+  white-space: normal;      /* current browsers */
+}
