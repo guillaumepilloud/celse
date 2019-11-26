@@ -99,16 +99,42 @@ p {
 p:last-child {
   margin-bottom: 0;
 }
-del {
+
+supp {
   display: none ;
 }
 
-.mid {
-  width: 95%;
-  height: 600px;
+label {
+  display: none ;
+}
+
+note {
+  display: none ;
+}
+
+gloss {
+  display: none ;
+}
+
+.flex-container {
   margin-top: 20px;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+}
+
+.flex-container > div {
+  margin: 0 10px;
+}
+
+.flex-container > div:first-child {
+  margin: 0 10px 0 20px;
+}
+
+.flex-container > div:last-child {
+  margin: 0 20px 0 10px;
+}
+
+.flex-container > div:last-child.btn-group {
+  margin: 0 0 0 10px;
 }
 
 .frame {
@@ -120,33 +146,101 @@ del {
 }
 
 .texte {
-  width: 45%;
   white-space: nowrap;
   height: 600px;
-  float : left;
   padding: 5px;
   overflow-x: auto;
   overflow-y: auto;
+  flex: 1 1 0;
 }
 
 .transcriptions {
-  width: 20%;
   white-space: nowrap;
   height: 600px;
-  float : left;
   padding: 5px;
   overflow-x: auto;
   overflow-y: auto;
+  flex: 1 1 0;
 }
 
-.hsize {
-  width: 2%;
-  height: 100px;
-  float: left;
+.comparaisons {
+  white-space: nowrap;
+  height: 600px;
+  padding: 5px;
+  overflow-x: auto;
+  overflow-y: auto;
+  flex: 1 1 0;
 }
 
 .wordWrap {
   word-wrap: break-word;      /* IE 5.5-7 */
   white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
   white-space: normal;      /* current browsers */
+}
+
+ins, .add {
+  text-decoration: none;
+  background-color: #6ead6e;
+}
+
+del, .supp {
+  text-decoration: line-through;
+  background-color: #cd6d69;
+}
+
+.btn-group input[type="button"] {
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em /* 16px/16=1em */;
+  cursor: pointer;
+  width: 150px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: block;
+}
+
+.btn-group input[type="button"]:hover {
+  opacity: 1;
+}
+
+/* boutons "Remplacements" et "Suppressions" */
+.supp {
+  display: inline;
+}
+
+/* bouton "Labels" */
+.label {
+  display: inline;
+  background-color: #B27BC4;
+}
+
+/* bouton "Notes" */
+.note {
+  display: inline;
+  background-color: #6293b2;
+}
+
+/* bouton "Gloses" */
+.term {
+  border-style: solid;
+  border-color: #FFB549;
+}
+
+/* bouton "Gloses" */
+.gloss {
+  display: inline;
+  background-color: #FFB549;
+}
+
+/* bouton "Conjectures" */
+.supplied::before {
+  content: "[";
+}
+
+/* bouton "Conjectures" */
+.supplied::after {
+  content: "]";
 }

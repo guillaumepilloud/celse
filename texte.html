@@ -14,12 +14,13 @@
     <ul>
         <li><a class="active" href="texte.html">Texte</a></li>
         <li><a href="transcriptions.html">Transcriptions</a></li>
+        <li><a href="FJ.html">Comparaison F et J</a></li>
     </ul>
 
-    <div class=mid>
+    <div class="flex-container">
     <div class="syncscroll frame texte wordWrap" name=texte>
         <h1>Édition</h1>
-        <div n="De Medicina" type="volume" lang="la">
+        <div id='edition_Guillaume' n="De Medicina" type="volume" lang="la">
             <div n="3" type="book">
                 <div n="18" type="chapter">
                         <p n="1">Et febrium quidem ratio exposita est. Supersunt uero alii corporis adfectus, qui huic superueniunt, ex quibus eos, qui certis partibus adsignari non possunt, protinus iungam. Incipiam ab insania primamque huius ipsius partem adgrediar, quae et acuta et in febre est : <foreign xml:lang="grc">φρένησιν</foreign> <orgName key="Greeks">Graeci</orgName> appellant.</p>
@@ -51,11 +52,9 @@
         </div>
     </div>
 
-    <div class=hsize></div>
-
     <div class="syncscroll frame texte wordWrap" name=texte>
         <h1>Traduction</h1>
-        <div n="De Medicina" type="volume" lang="fra">
+        <div id='traduction_Guillaume' n="De Medicina" type="volume" lang="fra">
             <div n="3" type="book">
                     <div n="18" type="chapter">
                         <p n="1">Le traitement des fièvres a maintenant été exposé. Il existe cependant d'autres affections du corps, qui viennent par succroît, et parmi lesquelles je commenterai, sans m'arrêter, celles qui ne peuvent être assignées à un membre ou à un organe spécifique. Je commencerai par la folie et l'aborderai sous cette première forme, qui est à la fois aiguë et rencontrée lors d'une fièvre, et que les <orgName key="Greeks">Grecs</orgName> appellent frénésie.</p>
@@ -87,6 +86,15 @@
         </div>
     </div>
     </div>
+
+    <script>
+    // injecter les numéros de paragraphe
+    let tous_les_p = document.querySelectorAll('p');
+    tous_les_p.forEach(function(el,index) {
+        let valeur_attribut = el.getAttribute('n');
+        el.innerHTML = valeur_attribut + '. ' + el.innerHTML;
+    });
+    </script>
       
 </body>
 </html>
