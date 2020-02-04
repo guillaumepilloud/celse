@@ -198,7 +198,6 @@ del, .supp {
   cursor: pointer;
   width: 150px;
   opacity: 0.6;
-  transition: 0.3s;
   display: block;
 }
 
