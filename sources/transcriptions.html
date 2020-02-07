@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="syncscroll.js"></script>
+</head>
+
+<body>
+    
+    <ul>
+        <li><a href="accueil.html">Accueil</a></li>
+        <li><a href="texte.html">Texte</a></li>
+        <li><a class="active" href="transcriptions.html">Transcriptions</a></li>
+        <li><a href="comp.html">Comparer</a></li>
+    </ul>
+
+    <div class="flex-container">
+        <div id="manuscritF" class="syncscroll frame transcriptions wordWrap" name=transcriptions></div>
+
+        <div id="manuscritJ" class="syncscroll frame transcriptions wordWrap" name=transcriptions></div>
+
+        <div id="manuscritT" class="syncscroll frame transcriptions wordWrap" name=transcriptions></div>
+
+        <div id="manuscritV" class="syncscroll frame transcriptions wordWrap" name=transcriptions></div>
+
+    <div class="btn-group">
+        <input type="button" value="Remplacements" id="select" onclick="substitution_add(); substitution_supp(); colorchange('select')" style="background:rgb(244,67,54);">
+        <input type="button" value="Insertions" id="select1" onclick="add(); colorchange('select1')" style="background:rgb(244,67,54);">
+        <input type="button" value="Suppressions" id="select2" onclick="supp(); colorchange('select2')" style="background:rgb(244,67,54);">
+        <input type="button" value="Labels" id="select3" onclick="label(); colorchange('select3')" style="background:rgb(244,67,54);">
+        <input type="button" value="Notes" id="select4" onclick="note(); colorchange('select4')" style="background:rgb(244,67,54);">
+        <input type="button" value="Gloses" id="select5" onclick="term(); gloss(); colorchange('select5')" style="background:rgb(244,67,54);">
+        <input type="button" value="Conjectures" id="select6" onclick="supplied(); colorchange('select6')" style="background:rgb(244,67,54);">
+    </div>
+    </div>
+
+    <script>
+         // charger le manuscrit F
+         $('#manuscritF').load('./transcript/f.html');
+
+         // charger le manuscrit J
+         $('#manuscritJ').load('./transcript/j.html');
+
+         // charger le manuscrit T
+         $('#manuscritT').load('./transcript/t.html');
+
+         // charger le manuscrit V
+         $('#manuscritV').load('./transcript/v.html');
+
+        function colorchange(id) {
+            var background = document.getElementById(id).style.backgroundColor;
+            if  (background == "rgb(244, 67, 54)") {
+                document.getElementById(id).style.backgroundColor = "rgb(76,175,80)";
+            }
+            if  (background == "rgb(76, 175, 80)") {
+                document.getElementById(id).style.backgroundColor = "rgb(244,67,54)";
+            }
+        }
+
+        function substitution_add() {
+            var x = document.querySelectorAll("subst > add");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.toggle("add");
+            }
+        }
+
+        function substitution_supp() {
+            var x = document.querySelectorAll("subst > supp");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.toggle("supp");
+            }
+        }
+
+        function add() {
+            var x = document.querySelectorAll(":not(subst) > add");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.toggle("add");
+            }
+        }
+
+        function supp() {
+            var x = document.querySelectorAll(":not(subst) > supp");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.toggle("supp");
+            }
+        }
+
+        function label() {
+            var x = document.querySelectorAll("label");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.toggle("label");
+            }
+        }
+
+        function note() {
+            var x = document.querySelectorAll("note");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.toggle("note");
+            }
+        }
+
+        function term() {
+            var x = document.querySelectorAll("term");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.toggle("term");
+            }
+        }
+
+        function gloss() {
+            var x = document.querySelectorAll("gloss");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.toggle("gloss");
+            }
+        }
+
+        function supplied() {
+            var x = document.querySelectorAll("supplied");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.toggle("supplied");
+            }
+        }
+    </script>
+      
+</body>
+</html>

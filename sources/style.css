@@ -1,0 +1,254 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  background-color: #F1F1F1;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #666;
+  font-size: 100%;
+  line-height: 1.45em /* 23.2px/16=1.45em */;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+h1 {
+  font-size: 1em /* 16px/16=1em */;
+  margin-bottom: 0.375em /* 6px/16=0.375em */;
+}
+
+p {
+  font-size: 0.875em /* 14px/16=0.875em */;
+  margin-bottom: 1em /* 16px/16=1em */;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+supp {
+  display: none ;
+}
+
+label {
+  display: none ;
+}
+
+note {
+  display: none ;
+}
+
+gloss {
+  display: none ;
+}
+
+select {
+  margin-top: 20px;
+}
+
+select:first-of-type {
+  margin-left: 20px;
+}
+
+.flex-container {
+  margin-top: 20px;
+  display: flex;
+}
+
+.flex-container > div {
+  margin: 0 10px;
+}
+
+.flex-container > div:first-child {
+  margin: 0 10px 0 20px;
+}
+
+.flex-container > div:last-child {
+  margin: 0 20px 0 10px;
+}
+
+.flex-container > div:last-child.btn-group {
+  margin: 0 0 0 10px;
+}
+
+.frame {
+  border: 1px solid rgb(31, 40, 49);
+  background-color : #FFFFFF;
+  color : #000000;
+  overflow: auto;
+  position: relative;
+}
+
+.texte {
+  white-space: nowrap;
+  height: 600px;
+  padding: 5px;
+  overflow-x: auto;
+  overflow-y: auto;
+  flex: 1 1 0;
+}
+
+.transcriptions {
+  white-space: nowrap;
+  height: 600px;
+  padding: 5px;
+  overflow-x: auto;
+  overflow-y: auto;
+  flex: 1 1 0;
+}
+
+.comparaison {
+  white-space: nowrap;
+  height: 600px;
+  padding: 5px;
+  overflow-x: auto;
+  overflow-y: auto;
+  flex: 1 1 0;
+}
+
+.wordWrap {
+  word-wrap: break-word;      /* IE 5.5-7 */
+  white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+  white-space: normal;      /* current browsers */
+}
+
+ins, .add {
+  text-decoration: none;
+  background-color: #6ead6e;
+}
+
+del, .supp {
+  text-decoration: line-through;
+  background-color: #cd6d69;
+}
+
+.btn-group input[type="button"] {
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em /* 16px/16=1em */;
+  cursor: pointer;
+  width: 150px;
+  opacity: 0.6;
+  display: block;
+}
+
+.btn-group input[type="button"]:hover {
+  opacity: 1;
+}
+
+/* boutons "Remplacements" et "Suppressions" */
+.supp {
+  display: inline;
+}
+
+/* bouton "Labels" */
+.label {
+  display: inline;
+  background-color: #B27BC4;
+}
+
+/* bouton "Notes" */
+.note {
+  display: inline;
+  background-color: #6293b2;
+}
+
+/* bouton "Gloses" */
+.term {
+  border-style: solid;
+  border-color: #FFB549;
+}
+
+/* bouton "Gloses" */
+.gloss {
+  display: inline;
+  background-color: #FFB549;
+}
+
+/* bouton "Conjectures" */
+.supplied::before {
+  content: "[";
+}
+
+/* bouton "Conjectures" */
+.supplied::after {
+  content: "]";
+}
